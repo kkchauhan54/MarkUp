@@ -1,13 +1,745 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+/* <-----------------------------------------------------------Navbar-------------------------------------------------------------------------> */
+
+.navbar {
+    background-color: #f1f5f8;
+    overflow: hidden;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px;
+}
+.right-nav{
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-logo img {
+    height: 40px; /* Adjust the height to your logo size */
 }
+
+.navbar-links {
+    list-style: none;
+    margin-right: 5px;
+    display: flex; /* Use flexbox for layout */
+    align-items: center;
+    justify-content: end; /* Center items vertically */
+}
+.navbar-links a:hover{
+    color: #1e3c72;
+}
+
+.navbar-links li {
+    margin-right: 30px; /* Adjust the spacing between links */
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: black; /* Navy blue text color */
+    font-weight: 250;
+    font-size: 1.2rem;
+}
+.navbar-buttons button {
+    background-color: #1e3c72; /* Navy blue background color */
+    color: #f1f5f8; /* White text color */
+    padding: 5px 20px;
+    margin-left: 30px; /* Adjust the spacing between buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+/* <-----------------------------------------------------------section-------------------------------------------------------------------------> */
+
+.headingTop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.headingTop2{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+.headingTop h2 {
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+}
+
+.headingTop p {
+    font-size: 20px;
+    margin-bottom: 20px; /* Add some space below the paragraph */
+}
+.headingTop button{
+  background-color: #1e3c72; /* Navy blue background color */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 20px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: auto;
+}
+/* Section styles */
+    .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+} 
+
+.section-image {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    height: 100vh; /* Adjust the height of the container as needed */
+}
+.section-image img {
+  max-width: 100%; /* Ensure the image fits within the container */
+    max-height: 100%;
+    background-size: 100%;
+}
+
+.section-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-text h2 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+.section-text2{
+  width: 380px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.section-text p {
+    font-size: 20px;
+    margin-bottom: 20px; /* Add some space below the paragraph */
+}
+
+.section-button {
+    background-color: #1e3c72; /* Navy blue background color */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: auto;
+}
+
+.section-button:hover {
+    background-color: #165187; /* Darker blue on hover */
+}
+.cardT{
+  height: 100vh;
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.cardT2{
+height: 70vh;
+width: 70vw;
+background-color: #f1f5f8;
+border: 2px;
+border-radius: 25px;
+}
+.cardT h2{
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.cardT p{
+    font-size: 20px;
+    margin-bottom: 20px; /* Add some space below the paragraph */
+}
+.card-section{
+  padding-left: 368px;
+  width: 380px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* <-----------------------------------------------------------slider-------------------------------------------------------------------------> */
+/* Cards.css */
+
+/* Add this CSS to your App.css or a separate CSS file */
+.slider{
+  padding: 10px 20px;
+  height: 80vh;
+  background-color: #f1f5f8;
+}
+/* Center the carousel */
+.carousel-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Adjust the height as needed */
+    margin-top: 20px;
+    width: 75vw;
+    margin-left: 170px;
+}
+
+/* Style individual cards */
+.carousel-root .carousel .card {
+    background-color: #1e3c72;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height: 60vh;
+}
+
+/* Card image */
+.carousel-root .carousel .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Rounded image */
+    margin-bottom: 10px;
+}
+
+/* Card name */
+.carousel-root .carousel .card h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Card comment */
+.carousel-root .carousel .card p {
+    font-size: 1.3rem;
+    color: #666;
+}
+
+/* Adjust carousel arrow styles */
+.carousel-root .carousel .control-arrow {
+    background-color: #1e3c72; /* Arrow background color */
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-root .carousel .control-arrow:hover {
+    background-color: #165187; /* Darker blue on hover */
+}
+
+/* Remove default focus outline */
+.carousel-root .carousel:focus {
+    outline: none;
+}
+
+/* Center the carousel caption (index) */
+.carousel-root .carousel .control-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Adjust carousel dot styles */
+.carousel-root .carousel .control-dots .dot {
+    background-color: #f1f5f8; /* Dot color */
+    border: none;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-root .carousel .control-dots .dot.selected {
+    background-color: #ffffff; /* Darker blue for selected dot */
+}
+
+/* Adjust the dot size for selected dot */
+.carousel-root .carousel .control-dots .dot.selected::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff; /* Darker blue for selected dot */
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hide dot numbers */
+.carousel-root .carousel .control-dots .dot::before {
+    display: none;
+}
+
+
+/* <-----------------------------------------------------------footer-------------------------------------------------------------------------> */
+
+/* Footer styles */
+.footer {
+    background-color: #f1f5f8;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-top:50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 30px;
+}
+
+.footer-list li {
+    margin: 5px 0;
+}
+
+.footer-list a {
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.footer-list a:hover {
+    color: grey; /* Change color on hover */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid ;
+    margin: 20px 0;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.footer-copyright img {
+    height: 30px; /* Adjust the height to your logo size */
+    margin-right: 10px;
+}
+
+/* <----------------------------------------------------Customer-Page-------------------------------------------------------------------------> */
+
+         .customer-sect {
+            background-color: #e6e6ff;
+          }
+        .customer-section {
+            text-align: center;
+            padding: 240px;
+            font-size: 2.8rem; /* Big text size */
+            font-weight: bold;
+            width: 1000px;
+
+        }
+
+        .last-line {
+            color: #1e3c72; /* Blue color for the last line */
+        }
+
+        .ceo-name {
+            font-size: 1rem; /* Font size for CEO's name */
+            text-align: left;
+        }
+
+        .customer-section2 {
+            text-align: center;
+            padding: 120px;
+            font-size: 2.8rem; /* Big text size */
+            font-weight: bold;
+            background-color: rgb(31, 31, 57);
+            color: white;
+        }
+        .customer-sect2-box{
+            width: 100px;
+            margin: 90px;
+            font-size: 5rem;
+        }
+        .customer-sect2-up{
+            display: flex;
+        }
+/* <----------------------------------------------------Blog-Page-------------------------------------------------------------------------> */
+
+/* VlogCard.css */
+.blog-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0,-10px;
+}
+.vlog-card {
+    width: 40vw; /* Set the width to 40% of the viewport width */
+    height: 60vh; /* Set the height to 60% of the viewport height */
+    border: 1px solid #ddd; /* Border for the card */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Hide overflowing content */
+     margin: 20px; /* Add margin to each card */
+
+}
+
+.vlog-image {
+    flex: 1; /* Make the image take up the available space */
+    overflow: hidden; /* Hide overflowing image content */
+}
+
+.vlog-image img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: 100%; /* Make the image take up the full height of the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.vlog-details {
+    padding: 10px; /* Add some padding for the details section */
+    background-color: #f9f9f9; /* Background color for the details section */
+}
+
+h3 {
+    margin: 0; /* Remove default margin for the heading */
+}
+
+p {
+    margin: 5px 0; /* Add some margin to separate the details */
+}
+
+/* <----------------------------------------------------Login-Page-------------------------------------------------------------------------> */
+
+
+/* LogIn.css */
+
+/* Styles for the login-container */
+.login-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Styles for the left-half (login form) */
+.left-half {
+    flex: 1;
+    background-color: #f9f9f9; /* Background color for the left half */ /* Stack items vertically */
+}
+.login-top{
+    display: flex;
+    justify-content: space-between;
+    margin: 65px;
+}
+.left-form{
+display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.login-form {
+    width: 25vw;
+    margin-top: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.login-button {
+    background-color: #1e3c72;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 26.5vw;
+}
+
+.login-button:hover {
+    background-color: #005aa6; /* Darker blue on hover */
+}
+
+.login-connect{
+    background-color: #f1f5f8;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 12vw;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.login-connect img{
+    height: 30px;
+}
+.login-connect:hover {
+    background-color: rgb(232, 232, 232); /* Darker blue on hover */
+}
+/* Styles for the right-half (background image) */
+.right-half {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-half img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* <----------------------------------------------------Support-Page-------------------------------------------------------------------------> */
+
+/* SupportNavbar.css */
+
+.SupportNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f1f5f8;
+  color: black;
+}
+
+.SupportNavbar-logo img {
+  width: 50px; /* Adjust the size of your logo */
+  height: 50px;
+  margin-left: 30px;
+}
+
+.SupportNavbar-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.SupportNavbar-links li {
+  font-size: 1.2rem;
+  margin:20px 2px;
+}
+
+.SupportNavbar-links a {
+  text-decoration: none;
+  color: black;
+   margin: 10px;
+  transition: color 0.3s ease;
+}
+
+.SupportNavbar-links a:hover {
+  color: #1e3c72; /* Change to your desired link hover color */
+}
+.SupportNavbar-search{
+    margin-right: 30px;
+}
+.SupportNavbar-search input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+}
+
+.support-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+}
+
+.Support-top{
+    height: 180px;
+    background-color: rgb(42, 42, 77);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+}
+.Support-top-text{
+    margin-bottom: 20px;
+}
+
+
+.Support-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f1f5f8;
+}
+
+/* Support.css */
+
+/* ... Other CSS rules ... */
+
+.Support-sidebar {
+  width: 20vw;
+  background-color: white; /* Updated background color */
+  color: #333; /* Updated text color */
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  margin-left: 30px;
+}
+
+.Support-container h3 {
+  margin:20px 40px 20px;
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+
+.Support-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.Support-sidebar hr {
+   border: none;
+  height: 4px;
+  background-color: #f1f5f8;
+}
+
+.Support-sidebar li {
+  margin: 15px;
+}
+
+.Support-sidebar a {
+  text-decoration: none;
+  color: #333; /* Updated link color */
+  font-size: 18px; /* Increase font size */
+  transition: color 0.3s ease;
+}
+
+.Support-sidebar a:hover {
+  color: #00bcd4; /* Change to your desired link hover color */
+}
+
+.Support-main-content {
+    width: 70%;
+    padding: 20px;
+}
+
+
+/* SupportBox.css */
+
+.SupportBox {
+  background-color: #fff; /* White background */
+  color: #000; /* Black font color */
+  width: 290px; /* Adjust width as needed */
+  border: none;
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px;
+  margin: 15px;
+}
+.SupportBox-container{
+    display: flex;
+}
+.SupportBox-image {
+  width: 100%; /* Image covers the full width of the card */
+  height: 40%; /* Image covers 40% of the card's height */
+  object-fit: cover; /* Maintain aspect ratio and cover the image */
+  border-radius: 5px 5px 0 0; /* Rounded corners for the top */
+}
+
+.SupportBox-content {
+  padding: 20px 0; /* Add padding to separate content from image */
+}
+
+.SupportBox-title {
+  font-size: 18px;
+}
+
+.SupportBox-paragraph {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.SupportBox-button {
+  background-color: black; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 17vw;
+}
+
+.SupportBox-button:hover {
+  background-color: #008ba3; /* Button color on hover */
+}
+
+.SupportBox-hr {
+  border: none;
+  border-top: 1px solid #ddd; /* Horizontal rule color */
+  margin: 20px 0;
+}
+
+.SupportBox-time {
+  font-size: 14px;
+  color: #888; /* Timestamp color */
+}
+
+/* SupportCard.css */
+
+.SupportCard {
+  width: 970px;
+  height: 50vh;
+  display: flex;
+  margin: 20px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.SupportCard-image {
+  border-radius: 30px;
+}
+
+.SupportCard-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
