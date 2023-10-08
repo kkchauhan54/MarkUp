@@ -1,6 +1,10 @@
 import React from 'react'
 import SupportNavbar from '../components/Support-Navbar'
 import SupportFooter from '../components/Support-Footer'
+import ImageComments from './dashboard-components/ImageComments'
+import SharePopup from './dashboard-components/ShareButton'
+import UploadButton from './dashboard-components/UploadButton'
+import GuestLogin from './dashboard-components/GuestLogin'
 
 const Support = () => {
   return (
@@ -75,10 +79,19 @@ const Support = () => {
             <div className="SupportCard-image">
               <img src="images/phototo.webp" alt="Card Image" />
             </div>
-            <div className="SupportBox" style={{borderTopLeftRadius:'0px',borderBottomLeftRadius:'0px',height:'50vh'}}>
+            <div
+              className="SupportBox"
+              style={{
+                borderTopLeftRadius: '0px',
+                borderBottomLeftRadius: '0px',
+                height: '50vh',
+              }}
+            >
               <div className="SupportBox-content">
                 <h2 className="SupportBox-time">Getting Started</h2>
-                <h2 className="SupportBox-title" style={{fontSize:"2rem"}}>Navigating your Workspace</h2>
+                <h2 className="SupportBox-title" style={{ fontSize: '2rem' }}>
+                  Navigating your Workspace
+                </h2>
                 <p className="SupportBox-paragraph">
                   Invite team mebers and have fun with them pointing out
                   comments one ach others images
@@ -147,7 +160,10 @@ const Support = () => {
           </div>
         </main>
       </div>
-
+      <ImageComments />
+      <SharePopup />
+      <UploadButton />
+      <GuestLogin />
       <SupportFooter />
     </div>
   )
