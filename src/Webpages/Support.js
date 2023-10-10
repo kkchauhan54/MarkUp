@@ -2,9 +2,7 @@ import React from 'react'
 import SupportNavbar from '../components/Support-Navbar'
 import SupportFooter from '../components/Support-Footer'
 import ImageComments from './dashboard-components/ImageComments'
-import SharePopup from './dashboard-components/ShareButton'
-import UploadButton from './dashboard-components/UploadButton'
-import GuestLogin from './dashboard-components/GuestLogin'
+import DashboardImage from './dashboard-components/DashboardImage'
 
 const Support = () => {
   return (
@@ -161,9 +159,7 @@ const Support = () => {
         </main>
       </div>
       <ImageComments />
-      <SharePopup />
-      <UploadButton />
-      <GuestLogin />
+      <DashboardImage/>
       <SupportFooter />
     </div>
   )

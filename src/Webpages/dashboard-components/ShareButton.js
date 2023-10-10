@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './ShareButton.css'
 
-class SharePopup extends Component {
+class ShareButton extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -76,4 +76,4 @@ class SharePopup extends Component {
   }
 }
 
-export default SharePopup
+export default ShareButton
